@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import br.gov.sp.prodesp.sim.servicosprefeituras.R;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends BaseActivity {
 
 
     @Override

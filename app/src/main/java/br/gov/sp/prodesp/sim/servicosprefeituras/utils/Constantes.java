@@ -25,7 +25,10 @@ public class Constantes {
 
     public static final String TIPO_ACESSO_RENAVAM = "TIPO_ACESSO_RENAVAM";
     public static final String TIPO_ACESSO_CPF = "TIPO_ACESSO_CPF";
-    public static final int CAMERA_REQUEST_FOTO_1 = 1;
+
+    public static final int INDICAR_CONDUTOR = 999;
+    public static final int CAMERA_REQUEST_FOTO_1 = 2;
+
     public static final String ALERT_OK = "OK";
     public static final String ALERT_AVISO = "Aviso";
     public static String PERMISSION_CAMERA = Manifest.permission.CAMERA;
@@ -33,6 +36,7 @@ public class Constantes {
     public static String READ_PHONE_STATE = Manifest.permission.READ_PHONE_STATE;
     public static String[] PERMISSIONS = {PERMISSIONS_STORAGE, READ_PHONE_STATE, PERMISSION_CAMERA};
     public static int PERMISSION_ALL = 1;
+
 
     public static String chaveCriptografia = "FmrlzUQHUxRljmLd";
 }

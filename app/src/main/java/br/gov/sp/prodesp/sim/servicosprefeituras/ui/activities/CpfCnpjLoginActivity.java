@@ -12,7 +12,7 @@ import br.gov.sp.prodesp.sim.servicosprefeituras.utils.Constantes;
 
 import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.intefaces.PacoteActivityConstantes.CHAVE_TIPO_ACESSO;
 
-public class CpfCnpjLoginActivity extends AppCompatActivity {
+public class CpfCnpjLoginActivity extends BaseActivity {
 
     private EditText mCpfCnpj;
     private EditText mPasswordView;

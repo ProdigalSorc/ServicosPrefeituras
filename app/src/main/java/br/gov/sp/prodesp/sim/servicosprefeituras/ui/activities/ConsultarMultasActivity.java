@@ -6,6 +6,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -20,13 +22,15 @@ import br.gov.sp.prodesp.sim.servicosprefeituras.ui.adapter.interfaces.ItemClick
 
 import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.intefaces.PacoteActivityConstantes.CHAVE_MULTA_RETORNO;
 import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.intefaces.PacoteActivityConstantes.CHAVE_TIPO_ACESSO;
+import static br.gov.sp.prodesp.sim.servicosprefeituras.utils.Constantes.INDICAR_CONDUTOR;
 
 
-public class ConsultarMultasActivity extends AppCompatActivity implements ItemClickListener {
+public class ConsultarMultasActivity extends BaseActivity implements ItemClickListener, View.OnClickListener {
 
     private List<MultaRetorno> list;
     private String tipoAcesso;
     private ListaMultasAdapter adapter;
+    private Button botaoIndicarCondutor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,9 @@ public class ConsultarMultasActivity extends AppCompatActivity implements ItemCl
 
         TextView cnhUsuario = findViewById(R.id.activity_consultar_multas_cnh_usuario);
         cnhUsuario.setText("987.654.321.00");
+
+        botaoIndicarCondutor = findViewById(R.id.activity_consultar_multas_button_indicar);
+        botaoIndicarCondutor.setOnClickListener(this);
 
         getMultaRetornoExemplo();
         carregaTipoAcesso();
@@ -90,6 +97,7 @@ public class ConsultarMultasActivity extends AppCompatActivity implements ItemCl
         multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_EM_ANALISE);
         list.add(multaRetorno);
     }
+
     private void getMulta2() {
         MultaRetorno multaRetorno = new MultaRetorno();
         multaRetorno.setId(2);
@@ -108,6 +116,7 @@ public class ConsultarMultasActivity extends AppCompatActivity implements ItemCl
         multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_EM_ANALISE);
         list.add(multaRetorno);
     }
+
     private void getMulta3() {
         MultaRetorno multaRetorno = new MultaRetorno();
         multaRetorno.setId(3);
@@ -126,6 +135,7 @@ public class ConsultarMultasActivity extends AppCompatActivity implements ItemCl
         multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_EM_ANALISE);
         list.add(multaRetorno);
     }
+
     private void getMulta4() {
         MultaRetorno multaRetorno = new MultaRetorno();
         multaRetorno.setId(4);
@@ -144,6 +154,7 @@ public class ConsultarMultasActivity extends AppCompatActivity implements ItemCl
         multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_EM_ANALISE);
         list.add(multaRetorno);
     }
+
     private void getMulta5() {
         MultaRetorno multaRetorno = new MultaRetorno();
         multaRetorno.setId(5);
@@ -177,10 +188,36 @@ public class ConsultarMultasActivity extends AppCompatActivity implements ItemCl
     public void onLongClick(List<MultaRetorno> multas) {
         Log.e("onLongClick", "onLongClick");
         if (!multas.isEmpty()) {
+            habilitaBotaoIndicarCondutor();
             Log.e("Multas", "List<multa>: " + multas.size());
             for (MultaRetorno multaRetorno : multas) {
                 Log.e("Multas", "ids: " + multaRetorno.getId());
             }
+        } else {
+            desabilitaBotaoIndicarCondutor();
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intentIndicarCondutor = new Intent(ConsultarMultasActivity.this, IndicacaoCondutorActivity.class);
+        startActivityForResult(intentIndicarCondutor, INDICAR_CONDUTOR);
+    }
+
+    private void desabilitaBotaoIndicarCondutor() {
+        botaoIndicarCondutor.setVisibility(View.GONE);
+    }
+
+    private void habilitaBotaoIndicarCondutor() {
+        botaoIndicarCondutor.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == INDICAR_CONDUTOR && resultCode == RESULT_OK) {
+            adapter.deselecionaTodos();
+            adapter.notifyDataSetChanged();
         }
     }
 }

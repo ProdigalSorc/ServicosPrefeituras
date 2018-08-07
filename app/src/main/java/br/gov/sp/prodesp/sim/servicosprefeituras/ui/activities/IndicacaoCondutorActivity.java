@@ -1,5 +1,6 @@
 package br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -26,7 +27,7 @@ import br.gov.sp.prodesp.sim.servicosprefeituras.utils.FileUtil;
 
 import static br.gov.sp.prodesp.sim.servicosprefeituras.utils.Constantes.PERMISSION_ALL;
 
-public class IndicacaoCondutorActivity extends AppCompatActivity {
+public class IndicacaoCondutorActivity extends BaseActivity {
 
     private int CAMERA_REQUEST;
     private String caminhoFoto;
@@ -55,7 +56,7 @@ public class IndicacaoCondutorActivity extends AppCompatActivity {
         buttonOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                voltarOK();
             }
         });
     }

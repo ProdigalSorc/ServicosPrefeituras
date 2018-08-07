@@ -12,7 +12,7 @@ import br.gov.sp.prodesp.sim.servicosprefeituras.utils.Constantes;
 
 import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.intefaces.PacoteActivityConstantes.CHAVE_TIPO_ACESSO;
 
-public class DadosVeiculoActivity extends AppCompatActivity {
+public class DadosVeiculoActivity extends BaseActivity {
 
     EditText etRenavam;
     EditText etPlaca;

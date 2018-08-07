@@ -12,7 +12,7 @@ import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.intefaces.PacoteActiv
 import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.intefaces.PacoteActivityConstantes.CHAVE_TIPO_ACESSO;
 
 
-public class ResumoMultaActivity extends AppCompatActivity {
+public class ResumoMultaActivity extends BaseActivity {
 
     private ResumoMultaHelper helper;
 

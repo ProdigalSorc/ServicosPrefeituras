@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import br.gov.sp.prodesp.sim.servicosprefeituras.R;
 
-public class IndicacaoDetranActivity extends AppCompatActivity {
+public class IndicacaoDetranActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

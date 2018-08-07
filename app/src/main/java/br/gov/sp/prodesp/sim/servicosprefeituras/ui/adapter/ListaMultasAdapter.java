@@ -16,7 +16,7 @@ import br.gov.sp.prodesp.sim.servicosprefeituras.model.MultaRetorno;
 import br.gov.sp.prodesp.sim.servicosprefeituras.ui.adapter.helper.MultaViewHolder;
 import br.gov.sp.prodesp.sim.servicosprefeituras.ui.adapter.interfaces.ItemClickListener;
 
-public class ListaMultasAdapter extends RecyclerView.Adapter<MultaViewHolder>{
+public class ListaMultasAdapter extends RecyclerView.Adapter<MultaViewHolder> {
 
     private final List<MultaRetorno> multas;
     private final Context context;
@@ -41,6 +41,7 @@ public class ListaMultasAdapter extends RecyclerView.Adapter<MultaViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull final MultaViewHolder holder, int position) {
+        this.holder = holder;
         final MultaRetorno multaRetorno = multas.get(position);
         holder.vincula(multaRetorno);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -65,9 +66,9 @@ public class ListaMultasAdapter extends RecyclerView.Adapter<MultaViewHolder>{
     }
 
     private void addOrRemove(MultaRetorno multaRetorno) {
-        if(multaRetorno.isSelected()) {
+        if (multaRetorno.isSelected()) {
             multasRetorno.add(multaRetorno);
-        }else {
+        } else {
             multasRetorno.remove(multaRetorno);
         }
     }
@@ -88,6 +89,13 @@ public class ListaMultasAdapter extends RecyclerView.Adapter<MultaViewHolder>{
 
     public void setOnLongClickListener(ItemClickListener longClickListener) {
         this.longClickListener = longClickListener;
+    }
+
+    public void deselecionaTodos() {
+        for (MultaRetorno multaRetorno : multas) {
+            multaRetorno.setSelected(false);
+            holder.changeBackground(multaRetorno);
+        }
     }
 //
 //    @Override
