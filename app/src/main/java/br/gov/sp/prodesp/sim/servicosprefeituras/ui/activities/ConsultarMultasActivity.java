@@ -183,10 +183,10 @@ public class ConsultarMultasActivity extends BaseActivity implements ItemClickLi
     @Override
     public void onItemClick(MultaRetorno multa) {
         if (multa != null) {
-            Intent intent = new Intent(ConsultarMultasActivity.this, ResumoMultaActivity.class);
-            intent.putExtra(CHAVE_MULTA_RETORNO, multa);
-            intent.putExtra(CHAVE_TIPO_ACESSO, tipoAcesso);
-            startActivity(intent);
+            Intent intentResumoMulta = new Intent(ConsultarMultasActivity.this, ResumoMultaActivity.class);
+            intentResumoMulta.putExtra(CHAVE_MULTA_RETORNO, multa);
+            intentResumoMulta.putExtra(CHAVE_TIPO_ACESSO, tipoAcesso);
+            startActivityForResult(intentResumoMulta, INDICAR_CONDUTOR);
         }
     }
 

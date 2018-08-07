@@ -96,13 +96,13 @@ public class ResumoMultaHelper {
     private void abrirIndicarCondutor(ResumoMultaActivity activity) {
         Intent intentIndicarCondutor = new Intent(activity, IndicacaoCondutorActivity.class);
         activity.startActivity(intentIndicarCondutor);
-        activity.finish();
+        activity.setResultOK();
     }
 
     private void abrirAutoIndicacao(ResumoMultaActivity activity, String tipoAcesso) {
         Intent intentAutoIndicacao = new Intent(activity, CpfCnpjLoginActivity.class);
         intentAutoIndicacao.putExtra(CHAVE_TIPO_ACESSO, tipoAcesso);
         activity.startActivity(intentAutoIndicacao);
-        activity.finish();
+        activity.setResultOK();
     }
 }

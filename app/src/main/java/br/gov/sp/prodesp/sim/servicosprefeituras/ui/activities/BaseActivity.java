@@ -7,15 +7,15 @@ public abstract class BaseActivity  extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        voltarCancelar();
+        setResultCancelar();
     }
 
-    public void voltarCancelar() {
+    public void setResultCancelar() {
         setResult(Activity.RESULT_CANCELED);
         finish();
     }
 
-    public void voltarOK() {
+    public void setResultOK() {
         setResult(Activity.RESULT_OK);
         finish();
     }
