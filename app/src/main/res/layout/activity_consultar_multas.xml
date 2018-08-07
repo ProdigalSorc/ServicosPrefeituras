@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.ConsultarMultasActivity">
+
+    <TextView
+        android:id="@+id/activity_consultar_multas_cpf_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/activity_consultar_multas_cpf_usuario"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/activity_consultar_multas_cpf_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/activity_consultar_multas_cpf_label"
+        app:layout_constraintTop_toBottomOf="@+id/activity_consultar_multas_cpf_label"
+        tools:text="012.345.678-10" />
+
+    <TextView
+        android:id="@+id/activity_consultar_multas_cnh_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/activity_consultar_multas_cnh_usuario"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/activity_consultar_multas_cpf_usuario"
+        app:layout_constraintTop_toTopOf="@+id/activity_consultar_multas_cpf_label" />
+
+    <TextView
+        android:id="@+id/activity_consultar_multas_cnh_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/activity_consultar_multas_cnh_label"
+        app:layout_constraintTop_toBottomOf="@+id/activity_consultar_multas_cnh_label"
+        tools:text="987.654.321.00" />
+
+    <TextView
+        android:id="@+id/activity_consultar_aviso_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/activity_consultar_multas_texto_aviso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_consultar_multas_cpf_usuario" />
+
+    <ListView
+        android:id="@+id/activity_consultar_multas_lista"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:divider="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_consultar_aviso_label" />
+
+</android.support.constraint.ConstraintLayout>

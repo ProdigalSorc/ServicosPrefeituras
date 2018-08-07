@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.IndicacaoCondutorActivity">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/activity_indicacao_condutor_nome_indicado_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/activity_indicacao_condutor_nome_indicado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_nome_indicado"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/activity_indicacao_condutor_numero_registro_cnh_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/activity_indicacao_condutor_nome_indicado_layout"
+        app:layout_constraintStart_toStartOf="@+id/activity_indicacao_condutor_nome_indicado_layout"
+        app:layout_constraintTop_toBottomOf="@+id/activity_indicacao_condutor_nome_indicado_layout">
+
+        <EditText
+            android:id="@+id/activity_indicacao_condutor_numero_cnh_indicado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_numero_cnh"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/activity_indicacao_condutor_estado_indicado_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/activity_indicacao_condutor_numero_registro_cnh_layout"
+        app:layout_constraintStart_toStartOf="@+id/activity_indicacao_condutor_numero_registro_cnh_layout"
+        app:layout_constraintTop_toBottomOf="@+id/activity_indicacao_condutor_numero_registro_cnh_layout">
+
+        <EditText
+            android:id="@+id/activity_indicacao_condutor_estado_indicado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_estado"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/activity_indicacao_condutor_botao_tira_foto_cnh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_indicacao_condutor_estado_indicado_layout"
+        app:srcCompat="@mipmap/ic_retirar_foto" />
+
+    <TextView
+        android:id="@+id/activity_indicacao_condutor_foto_cnh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/activity_indicacao_condutor_foto_cnh_label"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_indicacao_condutor_botao_tira_foto_cnh" />
+
+    <ImageView
+        android:id="@+id/activity_indicacao_condutor_imagem_cnh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/activity_indicacao_condutor_btn_ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_indicacao_condutor_estado_indicado_layout"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+    <Button
+        android:id="@+id/activity_indicacao_condutor_btn_ok"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/button_ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/activity_indicacao_condutor_estado_indicado_layout"
+        app:layout_constraintStart_toStartOf="@+id/activity_indicacao_condutor_estado_indicado_layout"
+        app:layout_constraintTop_toBottomOf="@+id/activity_indicacao_condutor_estado_indicado_layout"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Serviços Prefeituras</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_cpf_cnpj">Digite o número de CPF ou CNPJ</string>
+
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!--Dados Veículo-->
+    <string name="prompt_placa">Placa do Veículo</string>
+    <string name="prompt_renavam">Número do Renavam</string>
+
+
+    <string name="button_ok">OK</string>
+
+    <string name="activity_consultar_multas_texto_aviso">Somente estarão disponíveis para indicação de condutor as multas aplicadas pela lista de Prefeituras e passíveis de indicação.</string>
+    <string name="activity_consultar_multas_cnh_usuario">Nº Registro CNH:</string>
+    <string name="activity_consultar_multas_cpf_usuario">CPF:</string>
+
+    <string name="activity_home_consultar_multas">Consultar Multas</string>
+    <string name="activity_home_indicar">Indicacao Detran</string>
+    <string name="activity_home_indica_condutor">Indicação de Condutor</string>
+
+    <string name="activity_resumo_multa_placa_label">Placa:</string>
+    <string name="activity_resumo_multa_marca_label">Marca:</string>
+    <string name="activity_resumo_multa_especie_label">Especie:</string>
+    <string name="activity_resumo_multa_data_emissao_label">Data Emissão:</string>
+    <string name="activity_resumo_multa_nome_proprietario_label">Nome Proprietário:</string>
+    <string name="activity_resumo_multa_nome_infracao_label">Infração</string>
+    <string name="activity_resumo_multa_descricao_infracao_label">Descrição:</string>
+    <string name="activity_resumo_multa_enquadramento_label">Enquadramento:</string>
+    <string name="activity_resumo_multa_local_infracao_label">Local:</string>
+    <string name="activity_resumo_multa_data_infracao_label">Data:</string>
+    <string name="activity_resumo_multa_hora_infracao_label">Hora:</string>
+    <string name="activity_resumo_multa_pontuacao_label">Pontuação:</string>
+    <string name="activity_resumo_multa_data_limite_label">Data limite indicação condutor autuação:</string>
+    <string name="activity_resumo_button_indicar_condutor">Indicar Condutor</string>
+    <string name="activity_resumo_button_auto_indicar">Auto Indicar Multa</string>
+    <string name="prompt_nome_indicado">Nome</string>
+    <string name="prompt_numero_cnh">Número Registro CNH</string>
+    <string name="prompt_estado">Estado</string>
+    <string name="activity_indicacao_condutor_foto_cnh_label">Retirar Foto CNH</string>
+
+    <string name="seguranca_acesso_permissao_camera">Por favor, para utilização da aplicação é necessário conceder permissão de uso de camera.</string>
+    <string name="activity_resumo_multa_orgao_infracao_label">Órgão Autuador:</string>
+    <string name="activity_resumo_multa_numero_ait_infracao_label">Número AIT:</string>
+    <string name="activity_resumo_multa_serie_ait_infracao_label">Série:</string>
+    <string name="item_multa_orgao_autuador_label">Órgão Autuador:</string>
+    <string name="item_multa_serie_label">Série:</string>
+    <string name="item_multa_numero_ait_label">Número AIT:</string>
+    <string name="item_multa_data_infracao_label">Data da Infração:</string>
+    <string name="item_multa_placa_label">Placa:</string>
+    <string name="item_multa_pontos_label">Pontos na CNH:</string>
+    <string name="item_multa_situacao_label">Situação:</string>
+</resources>

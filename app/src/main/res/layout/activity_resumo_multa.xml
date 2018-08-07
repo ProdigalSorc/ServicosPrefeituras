@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.ResumoMultaActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/activity_resumo_multa_contraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_placa_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/activity_resumo_multa_placa_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_placa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_resumo_multa_placa_label"
+                app:layout_constraintStart_toEndOf="@+id/activity_resumo_multa_placa_label"
+                app:layout_constraintTop_toTopOf="@+id/activity_resumo_multa_placa_label"
+                tools:text="BIT-0010" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_marca_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_multa_marca_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_placa_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_placa_label" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_marca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_resumo_multa_marca_label"
+                app:layout_constraintStart_toEndOf="@+id/activity_resumo_multa_marca_label"
+                app:layout_constraintTop_toTopOf="@+id/activity_resumo_multa_marca_label"
+                tools:text="Gol 1.0" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_especie_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_multa_especie_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_marca_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_marca_label" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_especie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_resumo_multa_especie_label"
+                app:layout_constraintStart_toEndOf="@+id/activity_resumo_multa_especie_label"
+                app:layout_constraintTop_toTopOf="@+id/activity_resumo_multa_especie_label"
+                tools:text="Passageiro" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_data_emissao_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_multa_data_emissao_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_especie_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_especie_label" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_data_emissao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_resumo_multa_data_emissao_label"
+                app:layout_constraintStart_toEndOf="@+id/activity_resumo_multa_data_emissao_label"
+                app:layout_constraintTop_toTopOf="@+id/activity_resumo_multa_data_emissao_label"
+                tools:text="10/07/2018" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_nome_proprietario_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_multa_nome_proprietario_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_data_emissao_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_data_emissao_label" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_nome_proprietario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_resumo_multa_nome_proprietario_label"
+                app:layout_constraintStart_toEndOf="@+id/activity_resumo_multa_nome_proprietario_label"
+                app:layout_constraintTop_toTopOf="@+id/activity_resumo_multa_nome_proprietario_label"
+                tools:text="José dos Santos" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/activity_resumo_multa_divisor_infracao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_nome_proprietario_label">
+
+                <TextView
+                    android:id="@+id/activity_resumo_multa_nome_infracao_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/activity_resumo_multa_nome_infracao_label"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_serie_ait_infracao_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_multa_serie_ait_infracao_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_nome_proprietario_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_divisor_infracao" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_serie_ait_infracao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:text="C"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_resumo_multa_serie_ait_infracao_label"
+                app:layout_constraintStart_toEndOf="@+id/activity_resumo_multa_serie_ait_infracao_label"
+                app:layout_constraintTop_toTopOf="@+id/activity_resumo_multa_serie_ait_infracao_label"
+                tools:text="C" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_num_ait_infracao_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/activity_resumo_multa_numero_ait_infracao_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/activity_resumo_multa_num_ait_infracao"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/activity_resumo_multa_serie_ait_infracao"
+                app:layout_constraintTop_toTopOf="@+id/activity_resumo_multa_serie_ait_infracao_label" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_num_ait_infracao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="0010"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_resumo_multa_num_ait_infracao_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/activity_resumo_multa_num_ait_infracao_label"
+                tools:text="0010" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_orgao_infracao_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_multa_orgao_infracao_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_serie_ait_infracao_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_serie_ait_infracao_label" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_orgao_infracao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Prefeitura de São Paulo"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_orgao_infracao_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_orgao_infracao_label"
+                tools:text="Prefeitura de São Paulo" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_descricao_infracao_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_multa_descricao_infracao_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_orgao_infracao"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_orgao_infracao" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_descricao_infracao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_descricao_infracao_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_descricao_infracao_label"
+                tools:text="Avançar o sinal vermelho do semáforo" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_enquadramento_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_multa_enquadramento_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_descricao_infracao"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_descricao_infracao" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_enquadramento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_resumo_multa_enquadramento_label"
+                app:layout_constraintStart_toEndOf="@+id/activity_resumo_multa_enquadramento_label"
+                app:layout_constraintTop_toTopOf="@+id/activity_resumo_multa_enquadramento_label"
+                tools:text="605-0" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_local_infracao_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_multa_local_infracao_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_enquadramento_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_enquadramento_label" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_local_infracao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_resumo_multa_local_infracao_label"
+                app:layout_constraintStart_toEndOf="@+id/activity_resumo_multa_local_infracao_label"
+                app:layout_constraintTop_toTopOf="@+id/activity_resumo_multa_local_infracao_label"
+                tools:text="Avenida Paulista" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_data_infracao_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_multa_data_infracao_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_local_infracao_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_local_infracao_label" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_data_infracao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_resumo_multa_data_infracao_label"
+                app:layout_constraintStart_toEndOf="@+id/activity_resumo_multa_data_infracao_label"
+                app:layout_constraintTop_toTopOf="@+id/activity_resumo_multa_data_infracao_label"
+                tools:text="01/10/2018" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_hora_infracao_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_multa_hora_infracao_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_data_infracao_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_data_infracao_label" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_hora_infracao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_resumo_multa_hora_infracao_label"
+                app:layout_constraintStart_toEndOf="@+id/activity_resumo_multa_hora_infracao_label"
+                app:layout_constraintTop_toTopOf="@+id/activity_resumo_multa_hora_infracao_label"
+                tools:text="12:00" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_pontuacao_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_multa_pontuacao_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_hora_infracao_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_hora_infracao_label" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_pontuacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_resumo_multa_pontuacao_label"
+                app:layout_constraintStart_toEndOf="@+id/activity_resumo_multa_pontuacao_label"
+                app:layout_constraintTop_toTopOf="@+id/activity_resumo_multa_pontuacao_label"
+                tools:text="10" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_data_limite_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_multa_data_limite_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_pontuacao_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_pontuacao_label" />
+
+            <TextView
+                android:id="@+id/activity_resumo_multa_data_limite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_data_limite_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_data_limite_label"
+                tools:text="10/08/2018" />
+
+            <Button
+                android:id="@+id/activity_resumo_button_indicar_condutor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_button_indicar_condutor"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_data_limite"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_data_limite" />
+
+            <Button
+                android:id="@+id/activity_resumo_button_auto_indicar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_button_auto_indicar"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_data_limite"
+                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_data_limite" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
