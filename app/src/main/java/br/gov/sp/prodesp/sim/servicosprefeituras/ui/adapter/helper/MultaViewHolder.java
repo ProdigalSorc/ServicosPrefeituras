@@ -1,5 +1,6 @@
 package br.gov.sp.prodesp.sim.servicosprefeituras.ui.adapter.helper;
 
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
@@ -35,5 +36,9 @@ public class MultaViewHolder extends RecyclerView.ViewHolder {
         campoPlaca.setText(multa.getPlaca());
         campoPontos.setText(multa.getPontosCnh());
         campoSituacao.setText(multa.getSituacaoMultaEnum().getSituacaoMulta());
+    }
+
+    public void changeBackground(MultaRetorno multaRetorno) {
+        itemView.setBackgroundColor(multaRetorno.isSelected() ? Color.CYAN : Color.WHITE);
     }
 }

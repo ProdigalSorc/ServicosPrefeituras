@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -50,6 +51,7 @@ public class ConsultarMultasActivity extends AppCompatActivity implements ItemCl
         adapter = new ListaMultasAdapter(list, ConsultarMultasActivity.this);
         listaDeMultas.setAdapter(adapter);
         adapter.setOnItemClickListener(this);
+        adapter.setOnLongClickListener(this);
     }
 
     private void carregaTipoAcesso() {
@@ -63,24 +65,102 @@ public class ConsultarMultasActivity extends AppCompatActivity implements ItemCl
     private void getMultaRetornoExemplo() {
         list = new ArrayList<>();
 
-        for (int i = 0; i < 5; i++) {
-            MultaRetorno multaRetorno = new MultaRetorno();
-            multaRetorno.setId(i);
-            multaRetorno.setDataInfracao(Calendar.getInstance());
-            multaRetorno.setHoraInfracao(Calendar.getInstance());
-            multaRetorno.setPlaca("BIT-0010");
-            multaRetorno.setMarca("Gol 1.0");
-            multaRetorno.setEspecie("Passageiro");
-            multaRetorno.setNomeProprietario("José da Silva");
-            multaRetorno.setDataEmissao(Calendar.getInstance());
-            multaRetorno.setDescricaoInfracao("Avançar o sinal vermelho do semáforo");
-            multaRetorno.setEnquadramento("605-0");
-            multaRetorno.setLocalInfracao("Avenida Paulista");
-            multaRetorno.setPontosCnh("10");
-            multaRetorno.setDataLimite(Calendar.getInstance());
-            multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_EM_ANALISE);
-            list.add(multaRetorno);
-        }
+        getMulta1();
+        getMulta2();
+        getMulta3();
+        getMulta4();
+        getMulta5();
+    }
+
+    private void getMulta1() {
+        MultaRetorno multaRetorno = new MultaRetorno();
+        multaRetorno.setId(1);
+        multaRetorno.setDataInfracao(Calendar.getInstance());
+        multaRetorno.setHoraInfracao(Calendar.getInstance());
+        multaRetorno.setPlaca("BIT-0001");
+        multaRetorno.setMarca("Gol 1.0");
+        multaRetorno.setEspecie("Passageiro");
+        multaRetorno.setNomeProprietario("José da Silva");
+        multaRetorno.setDataEmissao(Calendar.getInstance());
+        multaRetorno.setDescricaoInfracao("Avançar o sinal vermelho do semáforo");
+        multaRetorno.setEnquadramento("605-0");
+        multaRetorno.setLocalInfracao("Avenida Paulista");
+        multaRetorno.setPontosCnh("10");
+        multaRetorno.setDataLimite(Calendar.getInstance());
+        multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_EM_ANALISE);
+        list.add(multaRetorno);
+    }
+    private void getMulta2() {
+        MultaRetorno multaRetorno = new MultaRetorno();
+        multaRetorno.setId(2);
+        multaRetorno.setDataInfracao(Calendar.getInstance());
+        multaRetorno.setHoraInfracao(Calendar.getInstance());
+        multaRetorno.setPlaca("BIT-0002");
+        multaRetorno.setMarca("Gol 1.0");
+        multaRetorno.setEspecie("Passageiro");
+        multaRetorno.setNomeProprietario("José da Silva");
+        multaRetorno.setDataEmissao(Calendar.getInstance());
+        multaRetorno.setDescricaoInfracao("Avançar o sinal vermelho do semáforo");
+        multaRetorno.setEnquadramento("605-0");
+        multaRetorno.setLocalInfracao("Avenida Paulista");
+        multaRetorno.setPontosCnh("10");
+        multaRetorno.setDataLimite(Calendar.getInstance());
+        multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_EM_ANALISE);
+        list.add(multaRetorno);
+    }
+    private void getMulta3() {
+        MultaRetorno multaRetorno = new MultaRetorno();
+        multaRetorno.setId(3);
+        multaRetorno.setDataInfracao(Calendar.getInstance());
+        multaRetorno.setHoraInfracao(Calendar.getInstance());
+        multaRetorno.setPlaca("BIT-0003");
+        multaRetorno.setMarca("Gol 1.0");
+        multaRetorno.setEspecie("Passageiro");
+        multaRetorno.setNomeProprietario("José da Silva");
+        multaRetorno.setDataEmissao(Calendar.getInstance());
+        multaRetorno.setDescricaoInfracao("Avançar o sinal vermelho do semáforo");
+        multaRetorno.setEnquadramento("605-0");
+        multaRetorno.setLocalInfracao("Avenida Paulista");
+        multaRetorno.setPontosCnh("10");
+        multaRetorno.setDataLimite(Calendar.getInstance());
+        multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_EM_ANALISE);
+        list.add(multaRetorno);
+    }
+    private void getMulta4() {
+        MultaRetorno multaRetorno = new MultaRetorno();
+        multaRetorno.setId(4);
+        multaRetorno.setDataInfracao(Calendar.getInstance());
+        multaRetorno.setHoraInfracao(Calendar.getInstance());
+        multaRetorno.setPlaca("BIT-004");
+        multaRetorno.setMarca("Gol 1.0");
+        multaRetorno.setEspecie("Passageiro");
+        multaRetorno.setNomeProprietario("José da Silva");
+        multaRetorno.setDataEmissao(Calendar.getInstance());
+        multaRetorno.setDescricaoInfracao("Avançar o sinal vermelho do semáforo");
+        multaRetorno.setEnquadramento("605-0");
+        multaRetorno.setLocalInfracao("Avenida Paulista");
+        multaRetorno.setPontosCnh("10");
+        multaRetorno.setDataLimite(Calendar.getInstance());
+        multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_EM_ANALISE);
+        list.add(multaRetorno);
+    }
+    private void getMulta5() {
+        MultaRetorno multaRetorno = new MultaRetorno();
+        multaRetorno.setId(5);
+        multaRetorno.setDataInfracao(Calendar.getInstance());
+        multaRetorno.setHoraInfracao(Calendar.getInstance());
+        multaRetorno.setPlaca("BIT-0005");
+        multaRetorno.setMarca("Gol 1.0");
+        multaRetorno.setEspecie("Passageiro");
+        multaRetorno.setNomeProprietario("José da Silva");
+        multaRetorno.setDataEmissao(Calendar.getInstance());
+        multaRetorno.setDescricaoInfracao("Avançar o sinal vermelho do semáforo");
+        multaRetorno.setEnquadramento("605-0");
+        multaRetorno.setLocalInfracao("Avenida Paulista");
+        multaRetorno.setPontosCnh("10");
+        multaRetorno.setDataLimite(Calendar.getInstance());
+        multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_EM_ANALISE);
+        list.add(multaRetorno);
     }
 
     @Override
@@ -90,6 +170,17 @@ public class ConsultarMultasActivity extends AppCompatActivity implements ItemCl
             intent.putExtra(CHAVE_MULTA_RETORNO, multa);
             intent.putExtra(CHAVE_TIPO_ACESSO, tipoAcesso);
             startActivity(intent);
+        }
+    }
+
+    @Override
+    public void onLongClick(List<MultaRetorno> multas) {
+        Log.e("onLongClick", "onLongClick");
+        if (!multas.isEmpty()) {
+            Log.e("Multas", "List<multa>: " + multas.size());
+            for (MultaRetorno multaRetorno : multas) {
+                Log.e("Multas", "ids: " + multaRetorno.getId());
+            }
         }
     }
 }

@@ -21,6 +21,7 @@ public class MultaRetorno implements Serializable {
     private String localInfracao;
     private Calendar dataLimite;
     private SituacaoMultaEnum situacaoMultaEnum;
+    private boolean selected;
 
     public long getId() {
         return id;
@@ -132,6 +133,14 @@ public class MultaRetorno implements Serializable {
 
     public void setSituacaoMultaEnum(SituacaoMultaEnum situacaoMultaEnum) {
         this.situacaoMultaEnum = situacaoMultaEnum;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
+    }
+
+    public boolean isSelected() {
+        return selected;
     }
 
 
