@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static br.gov.sp.prodesp.sim.servicosprefeituras.utils.Constantes.PERMISSIONS;
-import static br.gov.sp.prodesp.sim.servicosprefeituras.utils.Constantes.PERMISSION_CAMERA;
 
 public class AppUtils {
 

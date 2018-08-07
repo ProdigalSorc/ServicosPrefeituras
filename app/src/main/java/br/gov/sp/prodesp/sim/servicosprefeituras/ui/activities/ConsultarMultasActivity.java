@@ -1,12 +1,10 @@
 package br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
+import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -17,22 +15,24 @@ import br.gov.sp.prodesp.sim.servicosprefeituras.R;
 import br.gov.sp.prodesp.sim.servicosprefeituras.model.MultaRetorno;
 import br.gov.sp.prodesp.sim.servicosprefeituras.model.enums.SituacaoMultaEnum;
 import br.gov.sp.prodesp.sim.servicosprefeituras.ui.adapter.ListaMultasAdapter;
+import br.gov.sp.prodesp.sim.servicosprefeituras.ui.adapter.interfaces.ItemClickListener;
 
 import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.intefaces.PacoteActivityConstantes.CHAVE_MULTA_RETORNO;
 import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.intefaces.PacoteActivityConstantes.CHAVE_TIPO_ACESSO;
 
 
-public class ConsultarMultasActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class ConsultarMultasActivity extends AppCompatActivity implements ItemClickListener {
 
     private List<MultaRetorno> list;
     private String tipoAcesso;
+    private ListaMultasAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consultar_multas);
 
-        ListView listaDeMultas = findViewById(R.id.activity_consultar_multas_lista);
+        RecyclerView listaDeMultas = findViewById(R.id.activity_consultar_multas_lista);
 
         TextView cpfUsuario = findViewById(R.id.activity_consultar_multas_cpf_usuario);
         cpfUsuario.setText("012.345.678-10");
@@ -44,12 +44,12 @@ public class ConsultarMultasActivity extends AppCompatActivity implements Adapte
         carregaTipoAcesso();
 
         montaAdapter(listaDeMultas);
-        listaDeMultas.setOnItemClickListener(this);
     }
 
-    private void montaAdapter(ListView listaDeMultas) {
-        ListaMultasAdapter adapter = new ListaMultasAdapter(list, ConsultarMultasActivity.this);
+    private void montaAdapter(RecyclerView listaDeMultas) {
+        adapter = new ListaMultasAdapter(list, ConsultarMultasActivity.this);
         listaDeMultas.setAdapter(adapter);
+        adapter.setOnItemClickListener(this);
     }
 
     private void carregaTipoAcesso() {
@@ -84,11 +84,10 @@ public class ConsultarMultasActivity extends AppCompatActivity implements Adapte
     }
 
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        MultaRetorno multaRetorno = (MultaRetorno) parent.getAdapter().getItem(position);
-        if (multaRetorno != null) {
+    public void onItemClick(MultaRetorno multa) {
+        if (multa != null) {
             Intent intent = new Intent(ConsultarMultasActivity.this, ResumoMultaActivity.class);
-            intent.putExtra(CHAVE_MULTA_RETORNO, multaRetorno);
+            intent.putExtra(CHAVE_MULTA_RETORNO, multa);
             intent.putExtra(CHAVE_TIPO_ACESSO, tipoAcesso);
             startActivity(intent);
         }

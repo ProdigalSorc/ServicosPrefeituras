@@ -1,15 +1,12 @@
 package br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
 import br.gov.sp.prodesp.sim.servicosprefeituras.R;
-import br.gov.sp.prodesp.sim.servicosprefeituras.utils.Constantes;
-
-import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.intefaces.PacoteActivityConstantes.CHAVE_TIPO_ACESSO;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -28,14 +25,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        ImageView mConsultarMultas = findViewById(R.id.home_imagem_consultar_multas);
-        mConsultarMultas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO - Incluir tratamento, caso o login não tenha sido realizado
-                vaiParaDadosVeiculo();
-            }
-        });
     }
 
     private void vaiParaCpfCnpjLogin() {

@@ -1,18 +1,15 @@
 package br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import br.gov.sp.prodesp.sim.servicosprefeituras.R;
-import br.gov.sp.prodesp.sim.servicosprefeituras.model.MultaRetorno;
 import br.gov.sp.prodesp.sim.servicosprefeituras.utils.Constantes;
 
-import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.intefaces.PacoteActivityConstantes.CHAVE_MULTA_RETORNO;
 import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.intefaces.PacoteActivityConstantes.CHAVE_TIPO_ACESSO;
 
 public class CpfCnpjLoginActivity extends AppCompatActivity {

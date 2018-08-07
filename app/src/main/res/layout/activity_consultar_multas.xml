@@ -67,15 +67,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activity_consultar_multas_cpf_usuario" />
 
-    <ListView
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/activity_consultar_multas_lista"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:divider="@null"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activity_consultar_aviso_label" />
+        app:layout_constraintTop_toBottomOf="@+id/activity_consultar_aviso_label"
+        tools:listitem="@layout/item_multa" />
 
 </android.support.constraint.ConstraintLayout>

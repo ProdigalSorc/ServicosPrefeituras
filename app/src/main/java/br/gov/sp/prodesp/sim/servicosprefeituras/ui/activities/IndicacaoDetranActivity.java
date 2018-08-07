@@ -1,7 +1,7 @@
 package br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import br.gov.sp.prodesp.sim.servicosprefeituras.R;
 
