@@ -32,12 +32,14 @@ public class ConsultarMultasActivity extends BaseActivity implements ItemClickLi
     private ListaMultasAdapter adapter;
     private Button botaoIndicarCondutor;
 
+    private RecyclerView listaDeMultas;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consultar_multas);
 
-        RecyclerView listaDeMultas = findViewById(R.id.activity_consultar_multas_lista);
+        listaDeMultas = findViewById(R.id.activity_consultar_multas_lista);
 
         TextView cpfUsuario = findViewById(R.id.activity_consultar_multas_cpf_usuario);
         cpfUsuario.setText("012.345.678-10");
@@ -48,17 +50,9 @@ public class ConsultarMultasActivity extends BaseActivity implements ItemClickLi
         botaoIndicarCondutor = findViewById(R.id.activity_consultar_multas_button_indicar);
         botaoIndicarCondutor.setOnClickListener(this);
 
-        getMultaRetornoExemplo();
         carregaTipoAcesso();
 
-        montaAdapter(listaDeMultas);
-    }
-
-    private void montaAdapter(RecyclerView listaDeMultas) {
-        adapter = new ListaMultasAdapter(list, ConsultarMultasActivity.this);
-        listaDeMultas.setAdapter(adapter);
-        adapter.setOnItemClickListener(this);
-        adapter.setOnLongClickListener(this);
+        recriaAdapter();
     }
 
     private void carregaTipoAcesso() {
@@ -66,6 +60,18 @@ public class ConsultarMultasActivity extends BaseActivity implements ItemClickLi
         if (intent.hasExtra(CHAVE_TIPO_ACESSO)) {
             tipoAcesso = (String) intent.getSerializableExtra(CHAVE_TIPO_ACESSO);
         }
+    }
+
+    private void recriaAdapter() {
+        getMultaRetornoExemplo();
+        montaAdapter();
+    }
+
+    private void montaAdapter() {
+        adapter = new ListaMultasAdapter(list, ConsultarMultasActivity.this);
+        listaDeMultas.setAdapter(adapter);
+        adapter.setOnItemClickListener(this);
+        adapter.setOnLongClickListener(this);
     }
 
     @NonNull
@@ -216,8 +222,9 @@ public class ConsultarMultasActivity extends BaseActivity implements ItemClickLi
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == INDICAR_CONDUTOR && resultCode == RESULT_OK) {
-            adapter.deselecionaTodos();
-            adapter.notifyDataSetChanged();
+            recriaAdapter();
+//            adapter.deselecionaTodos();
+//            adapter.notifyDataSetChanged();
         }
     }
 }
