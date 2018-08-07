@@ -378,37 +378,65 @@
                 app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_data_limite_label"
                 tools:text="10/08/2018" />
 
-            <Button
-                android:id="@+id/activity_resumo_button_indicar_condutor"
+            <!--<Button-->
+                <!--android:id="@+id/activity_resumo_button_indicar_condutor"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginRight="8dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:text="@string/activity_resumo_button_indicar_condutor"-->
+                <!--android:visibility="gone"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_data_limite"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_data_limite" />-->
+
+            <!--<Button-->
+            <!--android:id="@+id/activity_resumo_button_auto_indicar"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginRight="8dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:text="@string/activity_resumo_button_auto_indicar"-->
+            <!--android:visibility="gone"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_data_limite"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_data_limite" />-->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraint_layout_floating_button_indicar_condutor"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/activity_resumo_button_indicar_condutor"
-                android:visibility="gone"
+                android:layout_height="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_data_limite"
-                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_data_limite" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <Button
-                android:id="@+id/activity_resumo_button_auto_indicar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/activity_resumo_button_auto_indicar"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_data_limite"
-                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_data_limite" />
+                <Button
+                    android:id="@+id/activity_resumo_button_indicar_condutor"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/fundo_indicar"
+                    android:elevation="6dp"
+                    android:stateListAnimator="@null"
+                    android:text="+"
+                    android:textColor="#ffffff"
+                    android:textSize="40sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
 
-
+            </android.support.constraint.ConstraintLayout>
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

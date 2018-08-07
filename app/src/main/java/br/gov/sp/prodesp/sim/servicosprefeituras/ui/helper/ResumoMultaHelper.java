@@ -50,16 +50,16 @@ public class ResumoMultaHelper {
         multaRetorno = new MultaRetorno();
     }
 
-    private void mostraBotaoAutoIndicarMulta(final String tipoAcesso) {
-        Button btnAutoIndicarMulta = activity.findViewById(R.id.activity_resumo_button_auto_indicar);
-        btnAutoIndicarMulta.setVisibility(View.VISIBLE);
-        btnAutoIndicarMulta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                abrirAutoIndicacao(activity, tipoAcesso);
-            }
-        });
-    }
+//    private void mostraBotaoAutoIndicarMulta(final String tipoAcesso) {
+//        Button btnAutoIndicarMulta = activity.findViewById(R.id.activity_resumo_button_auto_indicar);
+//        btnAutoIndicarMulta.setVisibility(View.VISIBLE);
+//        btnAutoIndicarMulta.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                abrirAutoIndicacao(activity, tipoAcesso);
+//            }
+//        });
+//    }
 
     private void mostraBotaoIndicarCondutor() {
         Button btnIndicarCondutor = activity.findViewById(R.id.activity_resumo_button_indicar_condutor);
@@ -88,7 +88,7 @@ public class ResumoMultaHelper {
         if (tipoAcesso.equals(Constantes.TIPO_ACESSO_CPF)) {
             mostraBotaoIndicarCondutor();
         } else {
-            mostraBotaoAutoIndicarMulta(tipoAcesso);
+//            mostraBotaoAutoIndicarMulta(tipoAcesso);
         }
         this.multaRetorno = multaRetorno;
     }
