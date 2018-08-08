@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,11 +24,13 @@ public class ListaMultasAdapter extends RecyclerView.Adapter<MultaViewHolder> {
     private final Context context;
     private static ItemClickListener itemClickListener;
     private static ItemClickListener longClickListener;
-    private MultaRetorno multaRetorno;
     private List<MultaRetorno> multasRetorno = new ArrayList<>();
     private MultaViewHolder holder;
+    private int itensSelecionados;
 
     public ListaMultasAdapter(List<MultaRetorno> multas, Context context) {
+        itensSelecionados = 0;
+        Log.e("ListaMultasAdapter", "itensSelecionados: " + itensSelecionados );
         this.multas = multas;
         this.context = context;
     }
@@ -61,20 +64,18 @@ public class ListaMultasAdapter extends RecyclerView.Adapter<MultaViewHolder> {
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        itemClickListener.onItemClick(multaRetorno);
+                        Log.e("ListaMultasAdapter", "setOnClickListener itensSelecionados: " + itensSelecionados);
+                        if (itensSelecionados == 0) {
+                            itemClickListener.onItemClick(multaRetorno);
+                        } else{
+                            configuraComportamentoLongoClique(multaRetorno, holder);
+                        }
                     }
                 });
                 holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
                     @Override
                     public boolean onLongClick(View v) {
-                        if (longClickListener != null && multaRetorno != null) {
-                            multaRetorno.setSelected(!multaRetorno.isSelected());
-                            holder.changeBackground(context, multaRetorno);
-                            addOrRemove(multaRetorno);
-                            longClickListener.onLongClick(multasRetorno);
-                            return true;
-                        }
-                        return false;
+                        return configuraComportamentoLongoClique(multaRetorno, holder);
                     }
                 });
             } else if (holder instanceof FooterViewHolder) {
@@ -84,6 +85,33 @@ public class ListaMultasAdapter extends RecyclerView.Adapter<MultaViewHolder> {
             e.printStackTrace();
         }
 
+    }
+
+    private boolean configuraComportamentoLongoClique(MultaRetorno multaRetorno, @NonNull MultaViewHolder holder) {
+        if (longClickListener != null && multaRetorno != null) {
+            configuraViewSelecionada(multaRetorno, holder);
+            longClickListener.onLongClick(multasRetorno);
+            return true;
+        }
+        return false;
+    }
+
+    private void configuraViewSelecionada(MultaRetorno multaRetorno, @NonNull MultaViewHolder holder) {
+        multaRetorno.setSelected(!multaRetorno.isSelected());
+        setaQuantidadeItensSelecionados(multaRetorno);
+        holder.changeBackground(context, multaRetorno);
+        addOrRemove(multaRetorno);
+    }
+
+    private void setaQuantidadeItensSelecionados(MultaRetorno multaRetorno) {
+        if (multaRetorno.isSelected()){
+            Log.e("ListaMultasAdapter", "configuraViewSelecionada multaRetorno.isSelected(): " + multaRetorno.isSelected() );
+            itensSelecionados++;
+        } else {
+            Log.e("ListaMultasAdapter", "configuraViewSelecionada multaRetorno.isSelected(): " + multaRetorno.isSelected() );
+            itensSelecionados--;
+        }
+        Log.e("ListaMultasAdapter", "configuraViewSelecionada itensSelecionados: " + itensSelecionados );
     }
 
     private void addOrRemove(MultaRetorno multaRetorno) {
