@@ -44,10 +44,16 @@ public class MultaViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void changeBackground(Context context, MultaRetorno multaRetorno) {
-        Drawable itemBranco = getDrawableItemBranco(context);
-        Drawable itemAzul = getDrawableItemAzul(context);
+        Drawable padraoBranco = getDrawableItemBranco(context);
+        Drawable selecionado = getDrawableItemAzul(context);
+        atualizaBackgroundPelaVersao(multaRetorno, padraoBranco, selecionado);
+    }
+
+    private void atualizaBackgroundPelaVersao(MultaRetorno multaRetorno, Drawable padraoBranco, Drawable selecionado) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            cardView.setBackground(multaRetorno.isSelected() ? itemAzul : itemBranco);
+            cardView.setBackground(multaRetorno.isSelected() ? selecionado : padraoBranco);
+        } else {
+            cardView.setBackgroundDrawable(multaRetorno.isSelected() ? selecionado : padraoBranco);
         }
     }
 
