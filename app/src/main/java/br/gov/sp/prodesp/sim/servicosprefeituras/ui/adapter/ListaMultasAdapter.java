@@ -18,6 +18,7 @@ import br.gov.sp.prodesp.sim.servicosprefeituras.ui.adapter.interfaces.ItemClick
 
 public class ListaMultasAdapter extends RecyclerView.Adapter<MultaViewHolder> {
 
+    private static final int FOOTER_VIEW = 1;
     private final List<MultaRetorno> multas;
     private final Context context;
     private static ItemClickListener itemClickListener;
@@ -34,35 +35,55 @@ public class ListaMultasAdapter extends RecyclerView.Adapter<MultaViewHolder> {
     @NonNull
     @Override
     public MultaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View viewCriada = LayoutInflater.from(context)
+
+        View viewCriada;
+
+        if (viewType == FOOTER_VIEW) {
+            viewCriada = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.item_branco, parent, false);
+
+            return new FooterViewHolder(viewCriada);
+        }
+
+        viewCriada = LayoutInflater.from(context)
                 .inflate(R.layout.item_multa, parent, false);
         return new MultaViewHolder(viewCriada);
     }
 
     @Override
     public void onBindViewHolder(@NonNull final MultaViewHolder holder, int position) {
-        this.holder = holder;
-        final MultaRetorno multaRetorno = multas.get(position);
-        holder.vincula(multaRetorno);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                itemClickListener.onItemClick(multaRetorno);
+        try {
+            // TODO - Corrigir criação da view Holder
+            if (holder instanceof MultaViewHolder) {
+                this.holder = holder;
+                final MultaRetorno multaRetorno = multas.get(position);
+                holder.vincula(multaRetorno);
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        itemClickListener.onItemClick(multaRetorno);
+                    }
+                });
+                holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        if (longClickListener != null && multaRetorno != null) {
+                            multaRetorno.setSelected(!multaRetorno.isSelected());
+                            holder.changeBackground(context, multaRetorno);
+                            addOrRemove(multaRetorno);
+                            longClickListener.onLongClick(multasRetorno);
+                            return true;
+                        }
+                        return false;
+                    }
+                });
+            } else if (holder instanceof FooterViewHolder) {
+                FooterViewHolder vh = (FooterViewHolder) holder;
             }
-        });
-        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                if (longClickListener != null && multaRetorno != null) {
-                    multaRetorno.setSelected(!multaRetorno.isSelected());
-                    holder.changeBackground(context, multaRetorno);
-                    addOrRemove(multaRetorno);
-                    longClickListener.onLongClick(multasRetorno);
-                    return true;
-                }
-                return false;
-            }
-        });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void addOrRemove(MultaRetorno multaRetorno) {
@@ -80,7 +101,28 @@ public class ListaMultasAdapter extends RecyclerView.Adapter<MultaViewHolder> {
 
     @Override
     public int getItemCount() {
-        return multas.size();
+        if (multas == null) {
+            return 0;
+        }
+
+        if (multas.size() == 0) {
+            //Return 1 here to show nothing
+            return 1;
+        }
+
+        // Add extra view to show the footer view
+        return multas.size() + 1;
+//        return multas.size();
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (position == multas.size()) {
+            // This is where we'll add footer.
+            return FOOTER_VIEW;
+        }
+
+        return super.getItemViewType(position);
     }
 
     public void setOnItemClickListener(ItemClickListener itemClickListener) {
@@ -95,6 +137,18 @@ public class ListaMultasAdapter extends RecyclerView.Adapter<MultaViewHolder> {
         for (MultaRetorno multaRetorno : multas) {
             multaRetorno.setSelected(false);
 //            holder.changeBackground(multaRetorno);
+        }
+    }
+
+    public class FooterViewHolder extends MultaViewHolder {
+        public FooterViewHolder(View itemView) {
+            super(itemView);
+//            itemView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    // Do whatever you want on clicking the item
+//                }
+//            });
         }
     }
 //

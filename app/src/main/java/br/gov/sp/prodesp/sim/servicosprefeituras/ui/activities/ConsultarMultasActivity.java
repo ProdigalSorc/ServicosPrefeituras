@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -72,6 +73,9 @@ public class ConsultarMultasActivity extends BaseActivity implements ItemClickLi
         listaDeMultas.setAdapter(adapter);
         adapter.setOnItemClickListener(this);
         adapter.setOnLongClickListener(this);
+//        View footer = new View(ConsultarMultasActivity.this);
+//        footer.setLayoutParams( new AbsListView.LayoutParams( RecyclerView.LayoutParams.FILL_PARENT, 100 ));
+//        listaDeMultas.addFooterView(footer, null, false);
     }
 
     @NonNull
