@@ -46,7 +46,9 @@
     <string name="activity_resumo_button_indicar_condutor">Indicar Condutor</string>
     <string name="activity_resumo_button_auto_indicar">Auto Indicar Multa</string>
     <string name="prompt_nome_indicado">Nome</string>
-    <string name="prompt_numero_cnh">Número Registro CNH</string>
+    <string name="prompt_rg_indicado">Nº RG</string>
+    <string name="prompt_cpf_indicado">Nº CPF</string>
+    <string name="prompt_numero_cnh">Nº Registro CNH / Permissão</string>
     <string name="prompt_estado">Estado</string>
     <string name="activity_indicacao_condutor_foto_cnh_label">Retirar Foto CNH</string>
 
@@ -61,4 +63,12 @@
     <string name="item_multa_placa_label">Placa:</string>
     <string name="item_multa_pontos_label">Pontos na CNH:</string>
     <string name="item_multa_situacao_label">Situação:</string>
+
+    <string name="aviso_sr_proprietario">SR. PROPRIETÁRIO DO VEÍCULO</string>
+    <string name="aviso_preenchimento">Caso V.Sª. não seja o infrator (Artigo 257 § 7º e 8º do CTB), preencha todos os campos abaixo e envie para este órgão de trânsito, no prazo estabelecido acima, ao fim do qual, não o fazendo, será considerado responsável pela infração. Juntar cópia reprográfica legível, dos seguintes documentos: Frente e verso da CNH / Permissão e de documento que
+comprove a assinatura do condutor infrator, quando esta não constar no referido documento. Documento de identificação do proprietário do veículo.</string>
+
+    <string name="activity_indicacao_proprietario_label">PROPRIETÁRIO</string>
+    <string name="activity_dados_condutor_proprietario_label">IDENTIFICAÇÃO DO CONDUTOR / INFRATOR</string>
+
 </resources>
