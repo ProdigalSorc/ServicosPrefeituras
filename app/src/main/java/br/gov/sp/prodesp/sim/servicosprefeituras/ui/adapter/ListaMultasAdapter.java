@@ -55,7 +55,7 @@ public class ListaMultasAdapter extends RecyclerView.Adapter<MultaViewHolder> {
             public boolean onLongClick(View v) {
                 if (longClickListener != null && multaRetorno != null) {
                     multaRetorno.setSelected(!multaRetorno.isSelected());
-                    holder.changeBackground(multaRetorno);
+                    holder.changeBackground(context, multaRetorno);
                     addOrRemove(multaRetorno);
                     longClickListener.onLongClick(multasRetorno);
                     return true;
@@ -94,7 +94,7 @@ public class ListaMultasAdapter extends RecyclerView.Adapter<MultaViewHolder> {
     public void deselecionaTodos() {
         for (MultaRetorno multaRetorno : multas) {
             multaRetorno.setSelected(false);
-            holder.changeBackground(multaRetorno);
+//            holder.changeBackground(multaRetorno);
         }
     }
 //
