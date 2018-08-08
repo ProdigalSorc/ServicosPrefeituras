@@ -42,7 +42,7 @@
     <string name="activity_resumo_multa_data_infracao_label">Data:</string>
     <string name="activity_resumo_multa_hora_infracao_label">Hora:</string>
     <string name="activity_resumo_multa_pontuacao_label">Pontuação:</string>
-    <string name="activity_resumo_multa_data_limite_label">Data limite indicação condutor autuação:</string>
+    <string name="activity_resumo_multa_data_limite_label">Data limite indicação condutor:</string>
     <string name="activity_resumo_button_indicar_condutor">Indicar Condutor</string>
     <string name="activity_resumo_button_auto_indicar">Auto Indicar Multa</string>
     <string name="prompt_nome_indicado">Nome</string>
