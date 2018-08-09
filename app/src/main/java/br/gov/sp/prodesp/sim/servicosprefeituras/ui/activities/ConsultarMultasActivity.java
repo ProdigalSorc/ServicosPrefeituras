@@ -3,11 +3,9 @@ package br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -21,8 +19,8 @@ import br.gov.sp.prodesp.sim.servicosprefeituras.model.enums.SituacaoMultaEnum;
 import br.gov.sp.prodesp.sim.servicosprefeituras.ui.adapter.ListaMultasAdapter;
 import br.gov.sp.prodesp.sim.servicosprefeituras.ui.adapter.interfaces.ItemClickListener;
 
-import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.intefaces.PacoteActivityConstantes.CHAVE_MULTA_RETORNO;
-import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.intefaces.PacoteActivityConstantes.CHAVE_TIPO_ACESSO;
+import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.PacoteActivityConstantes.CHAVE_MULTA_RETORNO;
+import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.PacoteActivityConstantes.CHAVE_TIPO_ACESSO;
 import static br.gov.sp.prodesp.sim.servicosprefeituras.utils.Constantes.INDICAR_CONDUTOR;
 
 

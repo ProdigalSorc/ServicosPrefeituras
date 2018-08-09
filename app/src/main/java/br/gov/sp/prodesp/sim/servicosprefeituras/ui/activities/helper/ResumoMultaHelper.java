@@ -1,4 +1,4 @@
-package br.gov.sp.prodesp.sim.servicosprefeituras.ui.helper;
+package br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.helper;
 
 import android.content.Intent;
 import android.view.View;
@@ -13,7 +13,7 @@ import br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.ResumoMultaActivi
 import br.gov.sp.prodesp.sim.servicosprefeituras.utils.Constantes;
 import br.gov.sp.prodesp.sim.servicosprefeituras.utils.DataUtil;
 
-import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.intefaces.PacoteActivityConstantes.CHAVE_TIPO_ACESSO;
+import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.PacoteActivityConstantes.CHAVE_TIPO_ACESSO;
 
 public class ResumoMultaHelper {
 
