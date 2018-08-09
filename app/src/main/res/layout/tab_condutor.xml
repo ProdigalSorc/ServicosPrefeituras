@@ -106,6 +106,8 @@
                     android:id="@+id/activity_dados_condutor_rg_layout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
                     app:layout_constraintEnd_toStartOf="@+id/activity_dados_condutor_uf_rg"
                     app:layout_constraintStart_toStartOf="parent">
 
@@ -124,6 +126,7 @@
                     android:id="@+id/activity_dados_condutor_uf_rg"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
+                    android:spinnerMode="dropdown"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
@@ -145,6 +148,8 @@
                     android:id="@+id/activity_dados_condutor_numero_registro_cnh_layout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
                     app:layout_constraintEnd_toStartOf="@+id/activity_dados_condutor_uf_cnh"
                     app:layout_constraintStart_toStartOf="parent">
 
@@ -163,6 +168,7 @@
                     android:id="@+id/activity_dados_condutor_uf_cnh"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
+                    android:spinnerMode="dropdown"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/activity_dados_condutor_numero_registro_cnh_layout"
