@@ -7,7 +7,7 @@
 
             <stroke android:width="0dip" android:color="#000000" />
 
-            <gradient android:angle="-90" android:endColor="@color/colorPrimary" android:startColor="@color/colorPrimary" />
+            <gradient android:angle="-90" android:endColor="@color/colorPrimaryDark" android:startColor="@color/colorPrimaryDark" />
 
         </shape>
     </item>
@@ -18,7 +18,7 @@
 
             <stroke android:width="0dip" android:color="#000000" />
 
-            <gradient android:angle="-90" android:endColor="@color/azul" android:startColor="@color/azul" />
+            <gradient android:angle="-90" android:endColor="@color/colorPrimary" android:startColor="@color/colorPrimary" />
 
         </shape>
     </item>
@@ -30,7 +30,7 @@
 
             <stroke android:width="0dip" android:color="#000000" />
 
-            <gradient android:angle="-90" android:endColor="@color/colorPrimary" android:startColor="@color/colorPrimary" />
+            <gradient android:angle="-90" android:endColor="@color/colorPrimaryDark" android:startColor="@color/colorPrimaryDark" />
 
         </shape>
     </item>

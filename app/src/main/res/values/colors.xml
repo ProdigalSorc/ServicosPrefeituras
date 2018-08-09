@@ -3,18 +3,18 @@
     <!--<color name="colorPrimary">#3F51B5</color>-->
     <!--<color name="colorPrimaryDark">#303F9F</color>-->
     <!--<color name="colorAccent">#FF4081</color>-->
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#319BCC</color>
+    <color name="colorPrimaryDark">#456D7F</color>
+    <color name="colorAccent">#3DC2FF</color>
 
     <color name="blue_signature">#52afda</color>
     <color name="white">#ffffff</color>
 
 
     <color name="azul_muito_claro">#8ADAFF</color>
-    <color name="azul_claro">#3DC2FF </color>
+    <!--<color name="azul_claro">#3DC2FF </color>-->
     <color name="azul">#3098C8</color>
-    <color name="azul_regular">#319BCC </color>
-    <color name="azul_escuro">#456D7F </color>
+    <!--<color name="azul_regular">#319BCC </color>-->
+    <!--<color name="azul_escuro">#456D7F </color>-->
 
 </resources>

@@ -259,7 +259,7 @@
                                 android:paddingRight="10dp"
                                 android:text="Doc. identificação aceitos e como anexar"
                                 android:textAllCaps="false"
-                                android:textColor="@color/azul"
+                                android:textColor="@color/colorPrimary"
                                 android:textSize="15sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -411,7 +411,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@color/azul"
+                android:background="@color/colorPrimary"
                 android:text="Indicar condutor"
                 android:textAllCaps="false"
                 android:textColor="@color/white"

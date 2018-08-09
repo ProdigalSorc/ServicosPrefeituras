@@ -27,11 +27,11 @@
         <activity
             android:name=".ui.activities.HomeActivity"
             android:label="@string/app_name">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".ui.activities.IndicacaoCondutorActivity" />
         <activity android:name=".ui.activities.CpfCnpjLoginActivity" />
@@ -40,11 +40,11 @@
         <activity android:name=".ui.activities.ResumoMultaActivity" />
         <activity android:name=".ui.activities.IndicacaoDetranActivity" />
         <activity android:name=".ui.activities.DadosCondutorActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
 
 
