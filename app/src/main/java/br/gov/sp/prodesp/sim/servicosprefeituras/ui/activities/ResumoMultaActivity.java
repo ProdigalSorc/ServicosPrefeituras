@@ -7,9 +7,8 @@ import br.gov.sp.prodesp.sim.servicosprefeituras.R;
 import br.gov.sp.prodesp.sim.servicosprefeituras.model.MultaRetorno;
 import br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.helper.ResumoMultaHelper;
 
-import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.PacoteActivityConstantes.CHAVE_MULTA_RETORNO;
-import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.PacoteActivityConstantes.CHAVE_TIPO_ACESSO;
-
+import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.InterfacesActivityConstantes.CHAVE_MULTA_RETORNO;
+import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.InterfacesActivityConstantes.CHAVE_TIPO_ACESSO;
 
 public class ResumoMultaActivity extends BaseActivity {
 

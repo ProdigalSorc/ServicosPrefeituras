@@ -19,8 +19,8 @@ import br.gov.sp.prodesp.sim.servicosprefeituras.model.enums.SituacaoMultaEnum;
 import br.gov.sp.prodesp.sim.servicosprefeituras.ui.adapter.ListaMultasAdapter;
 import br.gov.sp.prodesp.sim.servicosprefeituras.ui.adapter.interfaces.ItemClickListener;
 
-import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.PacoteActivityConstantes.CHAVE_MULTA_RETORNO;
-import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.PacoteActivityConstantes.CHAVE_TIPO_ACESSO;
+import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.InterfacesActivityConstantes.CHAVE_MULTA_RETORNO;
+import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.InterfacesActivityConstantes.CHAVE_TIPO_ACESSO;
 import static br.gov.sp.prodesp.sim.servicosprefeituras.utils.Constantes.INDICAR_CONDUTOR;
 
 

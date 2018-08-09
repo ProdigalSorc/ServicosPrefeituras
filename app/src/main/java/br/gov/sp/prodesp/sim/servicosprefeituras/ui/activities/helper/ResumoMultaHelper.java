@@ -13,7 +13,8 @@ import br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.ResumoMultaActivi
 import br.gov.sp.prodesp.sim.servicosprefeituras.utils.Constantes;
 import br.gov.sp.prodesp.sim.servicosprefeituras.utils.DataUtil;
 
-import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.PacoteActivityConstantes.CHAVE_TIPO_ACESSO;
+import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.InterfacesActivityConstantes.CHAVE_TIPO_ACESSO;
+
 
 public class ResumoMultaHelper {
 

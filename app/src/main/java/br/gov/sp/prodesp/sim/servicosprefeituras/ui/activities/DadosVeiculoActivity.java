@@ -9,7 +9,8 @@ import android.widget.EditText;
 import br.gov.sp.prodesp.sim.servicosprefeituras.R;
 import br.gov.sp.prodesp.sim.servicosprefeituras.utils.Constantes;
 
-import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.PacoteActivityConstantes.CHAVE_TIPO_ACESSO;
+import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.InterfacesActivityConstantes.CHAVE_TIPO_ACESSO;
+
 
 public class DadosVeiculoActivity extends BaseActivity {
 
