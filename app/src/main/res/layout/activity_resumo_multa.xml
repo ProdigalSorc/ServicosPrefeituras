@@ -399,8 +399,10 @@
             android:layout_marginBottom="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
+            android:background="@drawable/fundo_indicar"
             android:elevation="6dp"
             android:stateListAnimator="@null"
+            android:text="+"
             android:textColor="#ffffff"
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -409,26 +411,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
-
-        <!--<Button-->
-            <!--android:id="@+id/activity_resumo_button_indicar_condutor"-->
-            <!--android:layout_width="56dp"-->
-            <!--android:layout_height="56dp"-->
-            <!--android:layout_marginBottom="16dp"-->
-            <!--android:layout_marginEnd="16dp"-->
-            <!--android:layout_marginRight="16dp"-->
-            <!--android:background="@drawable/fundo_indicar"-->
-            <!--android:elevation="6dp"-->
-            <!--android:stateListAnimator="@null"-->
-            <!--android:text="+"-->
-            <!--android:textColor="#ffffff"-->
-            <!--android:textSize="40sp"-->
-            <!--app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--app:layout_constraintEnd_toEndOf="parent"-->
-            <!--app:layout_constraintHorizontal_bias="1.0"-->
-            <!--app:layout_constraintStart_toStartOf="parent"-->
-            <!--app:layout_constraintTop_toTopOf="parent"-->
-            <!--app:layout_constraintVertical_bias="1.0" />-->
 
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
