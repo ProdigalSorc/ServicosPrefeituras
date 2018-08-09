@@ -40,13 +40,14 @@
         <activity android:name=".ui.activities.ResumoMultaActivity" />
         <activity android:name=".ui.activities.IndicacaoDetranActivity" />
         <activity android:name=".ui.activities.DadosCondutorActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
-
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -57,6 +58,8 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
+
+        <activity android:name=".ui.activities.IndicacaoActivity"></activity>
     </application>
 
 </manifest>

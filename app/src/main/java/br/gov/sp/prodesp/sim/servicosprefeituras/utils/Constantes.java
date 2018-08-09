@@ -31,6 +31,8 @@ public class Constantes {
 
     public static final String ALERT_OK = "OK";
     public static final String ALERT_AVISO = "Aviso";
+    public static final String TAB_CONDUTOR = "TAB_CONDUTOR";
+    public static final String TAB_PROPRIETARIO = "TAB_PROPRIETARIO";
     public static String PERMISSION_CAMERA = Manifest.permission.CAMERA;
     public static String PERMISSIONS_STORAGE = Manifest.permission.WRITE_EXTERNAL_STORAGE;
     public static String READ_PHONE_STATE = Manifest.permission.READ_PHONE_STATE;
