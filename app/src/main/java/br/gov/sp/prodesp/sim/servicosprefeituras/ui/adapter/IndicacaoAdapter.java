@@ -5,9 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.IndicacaoActivity;
-import br.gov.sp.prodesp.sim.servicosprefeituras.ui.fragment.TabCondutorFragment;
-import br.gov.sp.prodesp.sim.servicosprefeituras.ui.fragment.TabProprietarioFragment;
+import br.gov.sp.prodesp.sim.servicosprefeituras.ui.fragments.TabCondutorFragment;
+import br.gov.sp.prodesp.sim.servicosprefeituras.ui.fragments.TabProprietarioFragment;
 
 public class IndicacaoAdapter extends FragmentStatePagerAdapter {
 
