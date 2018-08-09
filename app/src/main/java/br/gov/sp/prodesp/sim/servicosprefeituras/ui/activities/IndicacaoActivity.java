@@ -1,8 +1,8 @@
 package br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities;
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
 
 import br.gov.sp.prodesp.sim.servicosprefeituras.R;
 import br.gov.sp.prodesp.sim.servicosprefeituras.ui.adapter.IndicacaoAdapter;
