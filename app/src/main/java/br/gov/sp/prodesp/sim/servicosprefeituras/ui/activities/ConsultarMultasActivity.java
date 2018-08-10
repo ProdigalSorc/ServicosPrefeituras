@@ -64,6 +64,7 @@ public class ConsultarMultasActivity extends BaseActivity implements ItemClickLi
     private void recriaAdapter() {
         getMultaRetornoExemplo();
         montaAdapter();
+        desabilitaBotaoIndicarCondutor();
     }
 
     private void montaAdapter() {
