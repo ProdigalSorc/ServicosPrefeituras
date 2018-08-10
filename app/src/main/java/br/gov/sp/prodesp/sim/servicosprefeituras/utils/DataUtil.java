@@ -2,6 +2,7 @@ package br.gov.sp.prodesp.sim.servicosprefeituras.utils;
 
 import android.support.annotation.NonNull;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -29,6 +30,19 @@ public class DataUtil {
             return df.format(date);
         }
         return "";
+    }
+
+
+    public static Date strToDateTime(String data){
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        if (data != null) {
+            try {
+                return dateFormat.parse(data);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
     }
 
 }

@@ -18,6 +18,7 @@ import br.gov.sp.prodesp.sim.servicosprefeituras.model.MultaRetorno;
 import br.gov.sp.prodesp.sim.servicosprefeituras.model.enums.SituacaoMultaEnum;
 import br.gov.sp.prodesp.sim.servicosprefeituras.ui.adapter.ListaMultasAdapter;
 import br.gov.sp.prodesp.sim.servicosprefeituras.ui.adapter.interfaces.ItemClickListener;
+import br.gov.sp.prodesp.sim.servicosprefeituras.utils.DataUtil;
 
 import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.InterfacesActivityConstantes.CHAVE_MULTA_RETORNO;
 import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.InterfacesActivityConstantes.CHAVE_TIPO_ACESSO;
@@ -84,122 +85,105 @@ public class ConsultarMultasActivity extends BaseActivity implements ItemClickLi
         getMulta1();
         getMulta2();
         getMulta3();
-        getMulta4();
-        getMulta5();
+//        getMulta4();
+//        getMulta5();
     }
 
     private void getMulta1() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(DataUtil.strToDateTime("15/07/2018 11:00"));
         MultaRetorno multaRetorno = new MultaRetorno();
         multaRetorno.setId(1);
         multaRetorno.setNumAit("0011");
         multaRetorno.setSerie("C");
         multaRetorno.setOrgaoAutuador("Prefeitura de Suzano");
-        multaRetorno.setDataInfracao(Calendar.getInstance());
-        multaRetorno.setHoraInfracao(Calendar.getInstance());
+        multaRetorno.setDataInfracao(calendar);
+        multaRetorno.setHoraInfracao(calendar);
         multaRetorno.setPlaca("BIT-0010");
         multaRetorno.setMarca("Gol 1.0");
         multaRetorno.setEspecie("Passageiro");
         multaRetorno.setNomeProprietario("José da Silva");
-        multaRetorno.setDataEmissao(Calendar.getInstance());
+
+        Calendar calendar1 = Calendar.getInstance();
+        calendar1.setTime(DataUtil.strToDateTime("20/07/2018 11:00"));
+        multaRetorno.setDataEmissao(calendar1);
+
         multaRetorno.setDescricaoInfracao("Avançar o sinal vermelho do semáforo");
         multaRetorno.setEnquadramento("605-0");
         multaRetorno.setLocalInfracao("Rua Nascente");
         multaRetorno.setPontosCnh("5");
-        multaRetorno.setDataLimite(Calendar.getInstance());
+
+        Calendar calendar2 = Calendar.getInstance();
+        calendar2.setTime(DataUtil.strToDateTime("20/08/2018 11:00"));
+        multaRetorno.setDataLimite(calendar2);
+
         multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_AGUARDANDO);
         list.add(multaRetorno);
     }
 
     private void getMulta2() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(DataUtil.strToDateTime("15/07/2018 12:00"));
         MultaRetorno multaRetorno = new MultaRetorno();
         multaRetorno.setId(2);
         multaRetorno.setNumAit("0012");
         multaRetorno.setSerie("C");
         multaRetorno.setOrgaoAutuador("Prefeitura de Suzano");
-        multaRetorno.setDataInfracao(Calendar.getInstance());
-        multaRetorno.setHoraInfracao(Calendar.getInstance());
+        multaRetorno.setDataInfracao(calendar);
+        multaRetorno.setHoraInfracao(calendar);
         multaRetorno.setPlaca("BIT-0010");
         multaRetorno.setMarca("Gol 1.0");
         multaRetorno.setEspecie("Passageiro");
         multaRetorno.setNomeProprietario("José da Silva");
-        multaRetorno.setDataEmissao(Calendar.getInstance());
+
+        calendar.setTime(DataUtil.strToDateTime("20/07/2018 11:00"));
+        multaRetorno.setDataEmissao(calendar);
+
         multaRetorno.setDescricaoInfracao("Permitir posse/conducao do veiculo a pessoa sem usar lentes corretoras de visao");
         multaRetorno.setEnquadramento("715-1");
         multaRetorno.setLocalInfracao("Rua Nascente");
         multaRetorno.setPontosCnh("7");
-        multaRetorno.setDataLimite(Calendar.getInstance());
+
+        calendar.setTime(DataUtil.strToDateTime("20/08/2018 11:00"));
+        multaRetorno.setDataLimite(calendar);
+
         multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_AGUARDANDO);
         list.add(multaRetorno);
     }
 
 
     private void getMulta3() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(DataUtil.strToDateTime("20/07/2018 17:50"));
         MultaRetorno multaRetorno = new MultaRetorno();
         multaRetorno.setId(3);
         multaRetorno.setNumAit("0013");
         multaRetorno.setSerie("C");
         multaRetorno.setOrgaoAutuador("Prefeitura de Suzano");
-        multaRetorno.setDataInfracao(Calendar.getInstance());
-        multaRetorno.setHoraInfracao(Calendar.getInstance());
+        multaRetorno.setDataInfracao(calendar);
+        multaRetorno.setHoraInfracao(calendar);
         multaRetorno.setPlaca("BIT-0010");
         multaRetorno.setMarca("Gol 1.0");
         multaRetorno.setEspecie("Passageiro");
         multaRetorno.setNomeProprietario("José da Silva");
-        multaRetorno.setDataEmissao(Calendar.getInstance());
+
+        Calendar calendar1 = Calendar.getInstance();
+        calendar1.setTime(DataUtil.strToDateTime("30/07/2018 11:00"));
+        multaRetorno.setDataEmissao(calendar1);
+
         multaRetorno.setDescricaoInfracao("Avançar o sinal vermelho do semáforo");
         multaRetorno.setEnquadramento("605-0");
-        multaRetorno.setLocalInfracao("Rua Nascente");
+        multaRetorno.setLocalInfracao("Rua Professor Nestor");
         multaRetorno.setPontosCnh("5");
-        multaRetorno.setDataLimite(Calendar.getInstance());
+
+        Calendar calendar2 = Calendar.getInstance();
+        calendar2.setTime(DataUtil.strToDateTime("30/08/2018 11:00"));
+        multaRetorno.setDataLimite(calendar2);
+
         multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_AGUARDANDO);
         list.add(multaRetorno);
     }
 
-
-    private void getMulta4() {
-        MultaRetorno multaRetorno = new MultaRetorno();
-        multaRetorno.setId(4);
-        multaRetorno.setNumAit("0014");
-        multaRetorno.setSerie("C");
-        multaRetorno.setOrgaoAutuador("Prefeitura de Suzano");
-        multaRetorno.setDataInfracao(Calendar.getInstance());
-        multaRetorno.setHoraInfracao(Calendar.getInstance());
-        multaRetorno.setPlaca("BIT-0010");
-        multaRetorno.setMarca("Gol 1.0");
-        multaRetorno.setEspecie("Passageiro");
-        multaRetorno.setNomeProprietario("José da Silva");
-        multaRetorno.setDataEmissao(Calendar.getInstance());
-        multaRetorno.setDescricaoInfracao("Avançar o sinal vermelho do semáforo");
-        multaRetorno.setEnquadramento("605-0");
-        multaRetorno.setLocalInfracao("Rua Nascente");
-        multaRetorno.setPontosCnh("5");
-        multaRetorno.setDataLimite(Calendar.getInstance());
-        multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_AGUARDANDO);
-        list.add(multaRetorno);
-    }
-
-
-    private void getMulta5() {
-        MultaRetorno multaRetorno = new MultaRetorno();
-        multaRetorno.setId(5);
-        multaRetorno.setNumAit("0015");
-        multaRetorno.setSerie("C");
-        multaRetorno.setOrgaoAutuador("Prefeitura de Suzano");
-        multaRetorno.setDataInfracao(Calendar.getInstance());
-        multaRetorno.setHoraInfracao(Calendar.getInstance());
-        multaRetorno.setPlaca("BIT-0010");
-        multaRetorno.setMarca("Gol 1.0");
-        multaRetorno.setEspecie("Passageiro");
-        multaRetorno.setNomeProprietario("José da Silva");
-        multaRetorno.setDataEmissao(Calendar.getInstance());
-        multaRetorno.setDescricaoInfracao("Avançar o sinal vermelho do semáforo");
-        multaRetorno.setEnquadramento("605-0");
-        multaRetorno.setLocalInfracao("Rua Nascente");
-        multaRetorno.setPontosCnh("5");
-        multaRetorno.setDataLimite(Calendar.getInstance());
-        multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_AGUARDANDO);
-        list.add(multaRetorno);
-    }
 
     @Override
     public void onItemClick(MultaRetorno multa) {
