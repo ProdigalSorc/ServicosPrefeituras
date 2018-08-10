@@ -8,6 +8,7 @@ import android.widget.TextView;
 import br.gov.sp.prodesp.sim.servicosprefeituras.R;
 import br.gov.sp.prodesp.sim.servicosprefeituras.model.MultaRetorno;
 import br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.CpfCnpjLoginActivity;
+import br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.IndicacaoActivity;
 import br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.IndicacaoCondutorActivity;
 import br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.ResumoMultaActivity;
 import br.gov.sp.prodesp.sim.servicosprefeituras.utils.Constantes;
@@ -95,7 +96,7 @@ public class ResumoMultaHelper {
     }
 
     private void abrirIndicarCondutor(ResumoMultaActivity activity) {
-        Intent intentIndicarCondutor = new Intent(activity, IndicacaoCondutorActivity.class);
+        Intent intentIndicarCondutor = new Intent(activity, IndicacaoActivity.class);
         activity.startActivity(intentIndicarCondutor);
         activity.setResultOK();
     }

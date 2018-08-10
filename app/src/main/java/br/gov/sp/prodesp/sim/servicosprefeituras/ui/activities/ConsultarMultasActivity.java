@@ -208,7 +208,7 @@ public class ConsultarMultasActivity extends BaseActivity implements ItemClickLi
 
     @Override
     public void onClick(View v) {
-        Intent intentIndicarCondutor = new Intent(ConsultarMultasActivity.this, IndicacaoCondutorActivity.class);
+        Intent intentIndicarCondutor = new Intent(ConsultarMultasActivity.this, IndicacaoActivity.class);
         startActivityForResult(intentIndicarCondutor, INDICAR_CONDUTOR);
     }
 
