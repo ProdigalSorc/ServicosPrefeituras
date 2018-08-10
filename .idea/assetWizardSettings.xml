@@ -75,8 +75,8 @@
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="backgroundColor" value="3098c8" />
                                       <entry key="iconShape" value="NONE" />
-                                      <entry key="imageAsset" value="C:\Desenv-Android\Rodrigo\Documentações\Prefeituras\Serviços Prefeituras\Re Indicar Condutor - icon\proprietario.png" />
-                                      <entry key="outputName" value="icone_proprietario" />
+                                      <entry key="imageAsset" value="C:\Desenv-Android\Rodrigo\Documentações\Prefeituras\Serviços Prefeituras\Re Indicar Condutor - icon\ic_arrow_drop_down.png" />
+                                      <entry key="outputName" value="ic_arrow_drop_down" />
                                     </map>
                                   </option>
                                 </PersistentState>
