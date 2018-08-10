@@ -223,10 +223,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Prefeitura de São Paulo"
+                android:text="Prefeitura de Suzano"
                 app:layout_constraintStart_toStartOf="@+id/activity_resumo_multa_orgao_infracao_label"
                 app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_orgao_infracao_label"
-                tools:text="Prefeitura de São Paulo" />
+                tools:text="Prefeitura de Suzano" />
 
             <TextView
                 android:id="@+id/activity_resumo_multa_descricao_infracao_label"

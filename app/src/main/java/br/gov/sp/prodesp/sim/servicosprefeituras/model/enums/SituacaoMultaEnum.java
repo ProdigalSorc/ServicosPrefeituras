@@ -1,9 +1,10 @@
 package br.gov.sp.prodesp.sim.servicosprefeituras.model.enums;
 
 public enum SituacaoMultaEnum {
-    AIT_EM_ANALISE(1, "Em análise"),
-    AIT_PROCESSADO(2, "Processado"),
-    AIT_CANCELADO(3, "Cancelado");
+    AIT_AGUARDANDO(1, "Aguardando"),
+    AIT_EM_ANALISE(2, "Em análise"),
+    AIT_PROCESSADO(3, "Processado"),
+    AIT_CANCELADO(4, "Cancelado");
 
     private int value;
     private String situacaoMulta;

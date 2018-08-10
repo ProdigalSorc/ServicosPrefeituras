@@ -14,6 +14,9 @@ import br.gov.sp.prodesp.sim.servicosprefeituras.utils.DataUtil;
 
 public class MultaViewHolder extends RecyclerView.ViewHolder {
 
+    private final TextView campoNumeroAit;
+    private final TextView campoSerieAit;
+    private final TextView campoOrgaoAtuador;
     private final TextView campoDataInfracao;
     private final TextView campoHoraInfracao;
     private final TextView campoPontos;
@@ -23,6 +26,9 @@ public class MultaViewHolder extends RecyclerView.ViewHolder {
 
     public MultaViewHolder(View itemView) {
         super(itemView);
+        campoNumeroAit = itemView.findViewById(R.id.item_multa_numero_ait);
+        campoSerieAit = itemView.findViewById(R.id.item_multa_serie);
+        campoOrgaoAtuador = itemView.findViewById(R.id.item_multa_orgao_autuador);
         cardView = itemView.findViewById(R.id.item_multa_constraint_layout);
         campoDataInfracao = itemView.findViewById(R.id.item_multa_data_infracao);
         campoHoraInfracao = itemView.findViewById(R.id.item_multa_hora_infracao);
@@ -36,6 +42,9 @@ public class MultaViewHolder extends RecyclerView.ViewHolder {
     }
 
     private void preencheCampos(MultaRetorno multa) {
+        campoNumeroAit.setText(multa.getNumAit());
+        campoSerieAit.setText(multa.getSerie());
+        campoOrgaoAtuador.setText(multa.getOrgaoAutuador());
         campoDataInfracao.setText(DataUtil.dataEmTexto(multa.getDataInfracao()));
         campoHoraInfracao.setText(DataUtil.horaEmTexto(multa.getHoraInfracao()));
         campoPlaca.setText(multa.getPlaca());

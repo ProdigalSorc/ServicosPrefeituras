@@ -41,12 +41,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
-                android:text="Prefeitura de São Paulo"
+                android:text="Prefeitura de Suzano"
                 app:layout_constraintEnd_toEndOf="@+id/item_multa_situacao"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/item_multa_orgao_autuador_label"
                 app:layout_constraintTop_toTopOf="@+id/item_multa_orgao_autuador_label"
-                tools:text="Prefeitura de São Paulo" />
+                tools:text="Prefeitura de Suzano" />
 
             <TextView
                 android:id="@+id/item_multa_serie_label"

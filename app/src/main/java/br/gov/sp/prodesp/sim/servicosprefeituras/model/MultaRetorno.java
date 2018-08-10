@@ -8,6 +8,9 @@ import br.gov.sp.prodesp.sim.servicosprefeituras.model.enums.SituacaoMultaEnum;
 public class MultaRetorno implements Serializable {
 
     private long id;
+    private String orgaoAutuador;
+    private String numAit;
+    private String serie;
     private Calendar dataInfracao;
     private Calendar horaInfracao;
     private String pontosCnh;
@@ -29,6 +32,30 @@ public class MultaRetorno implements Serializable {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getOrgaoAutuador() {
+        return orgaoAutuador;
+    }
+
+    public void setOrgaoAutuador(String orgaoAutuador) {
+        this.orgaoAutuador = orgaoAutuador;
+    }
+
+    public String getNumAit() {
+        return numAit;
+    }
+
+    public void setNumAit(String numAit) {
+        this.numAit = numAit;
+    }
+
+    public String getSerie() {
+        return serie;
+    }
+
+    public void setSerie(String serie) {
+        this.serie = serie;
     }
 
     public Calendar getDataInfracao() {

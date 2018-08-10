@@ -53,7 +53,8 @@
 
     <string name="button_ok">OK</string>
 
-    <string name="activity_consultar_multas_texto_aviso">Somente estarão disponíveis para indicação de condutor as multas aplicadas pela lista de Prefeituras e passíveis de indicação.</string>
+    <!--<string name="activity_consultar_multas_texto_aviso">Somente estarão disponíveis para indicação de condutor as multas aplicadas pela lista de Prefeituras e passíveis de indicação.</string>-->
+    <string name="activity_consultar_multas_texto_aviso">Selecione uma ou mais multas para indicação de condutor:</string>
     <string name="activity_consultar_multas_cnh_usuario">Nº Registro CNH:</string>
     <string name="activity_consultar_multas_cpf_usuario">CPF:</string>
 
