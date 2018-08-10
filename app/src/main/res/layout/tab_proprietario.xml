@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -26,8 +27,7 @@
                 android:layout_marginTop="8dp"
                 android:background="@color/colorPrimary"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/activity_resumo_multa_nome_proprietario_label">
+                app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
                     android:id="@+id/activity_identificacao_proprietario_label"
@@ -61,146 +61,49 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_divisor_proprietario" />
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/activity_dados_proprietario_nome_indicado_layout"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/activity_dados_proprietario_cpf_indicado_label"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="8dp"
+                android:text="@string/activity_consultar_multas_cpf_usuario"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/activity_dados_proprietario_observacao_label"
                 app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_observacao_label">
 
-                <EditText
-                    android:id="@+id/activity_dados_proprietario_nome_indicado"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/prompt_nome_indicado"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:singleLine="true" />
+            </TextView>
 
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/activity_dados_proprietario_cpf_indicado_layout"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/activity_dados_proprietario_nome_indicado_layout"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:text="012.345.678-90"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_dados_proprietario_cpf_indicado_label"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/activity_dados_proprietario_nome_indicado_layout"
-                app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_nome_indicado_layout">
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/activity_dados_proprietario_cpf_indicado_label"
+                app:layout_constraintTop_toTopOf="@+id/activity_dados_proprietario_cpf_indicado_label">
 
-                <EditText
-                    android:id="@+id/activity_dados_proprietario_cpf_indicado"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/prompt_cpf_indicado"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/activity_dados_proprietario_divisor_rg"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                app:layout_constraintEnd_toEndOf="@+id/activity_dados_proprietario_cpf_indicado_layout"
-                app:layout_constraintStart_toStartOf="@+id/activity_dados_proprietario_cpf_indicado_layout"
-                app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_cpf_indicado_layout">
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/activity_dados_proprietario_rg_layout"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    app:layout_constraintEnd_toStartOf="@+id/activity_dados_proprietario_uf_rg"
-                    app:layout_constraintStart_toStartOf="parent">
-
-                    <EditText
-                        android:id="@+id/activity_dados_proprietario_numero_rg_indicado"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/prompt_rg_indicado"
-                        android:inputType="textEmailAddress"
-                        android:maxLines="1"
-                        android:singleLine="true" />
-
-                </android.support.design.widget.TextInputLayout>
-
-                <Spinner
-                    android:id="@+id/activity_dados_proprietario_uf_rg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:spinnerMode="dropdown"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/activity_dados_proprietario_rg_layout"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </android.support.constraint.ConstraintLayout>
-
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/activity_dados_proprietario_divisor_cnh"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                app:layout_constraintEnd_toEndOf="@+id/activity_dados_proprietario_divisor_rg"
-                app:layout_constraintStart_toStartOf="@+id/activity_dados_proprietario_divisor_rg"
-                app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_divisor_rg">
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/activity_dados_proprietario_numero_registro_cnh_layout"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    app:layout_constraintEnd_toStartOf="@+id/activity_dados_proprietario_uf_cnh"
-                    app:layout_constraintStart_toStartOf="parent">
-
-                    <EditText
-                        android:id="@+id/activity_dados_proprietario_numero_cnh_indicado"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/prompt_numero_cnh"
-                        android:inputType="textEmailAddress"
-                        android:maxLines="1"
-                        android:singleLine="true" />
-
-                </android.support.design.widget.TextInputLayout>
-
-                <Spinner
-                    android:id="@+id/activity_dados_proprietario_uf_cnh"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:spinnerMode="dropdown"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/activity_dados_proprietario_numero_registro_cnh_layout"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </android.support.constraint.ConstraintLayout>
+            </TextView>
 
             <TextView
                 android:id="@+id/activity_dados_proprietario_foto_cnh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
                 android:text="Foto CNH:"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@+id/activity_indicacao_proprietario_botao_tira_foto_cnh"
-                app:layout_constraintEnd_toEndOf="@+id/activity_dados_proprietario_divisor_cnh"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/activity_dados_proprietario_divisor_cnh"
-                app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_divisor_cnh" />
+                app:layout_constraintStart_toStartOf="@+id/activity_dados_proprietario_cpf_indicado_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_cpf_indicado_label" />
 
             <ImageButton
                 android:id="@+id/activity_indicacao_proprietario_botao_tira_foto_cnh"
@@ -214,7 +117,7 @@
                 android:background="@android:color/transparent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/activity_dados_proprietario_foto_cnh"
-                app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_divisor_cnh"
+                app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_cpf_indicado_label"
                 app:srcCompat="@mipmap/ic_retirar_foto" />
 
             <TextView
@@ -242,6 +145,39 @@
                 app:layout_constraintStart_toStartOf="@+id/activity_indicacao_proprietario_botao_tira_foto_cnh"
                 app:layout_constraintTop_toBottomOf="@+id/activity_indicacao_proprietario_botao_tira_foto_cnh"
                 app:srcCompat="@mipmap/icone_assinatura" />
+
+            <TextView
+                android:id="@+id/activity_dados_proprietario_data_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_resumo_multa_data_infracao_label"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/activity_dados_proprietario_assinatura"
+                app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_assinatura">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/activity_dados_proprietario_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_dados_proprietario_data_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/activity_dados_proprietario_data_label"
+                app:layout_constraintTop_toTopOf="@+id/activity_dados_proprietario_data_label"
+                tools:text="10/08/2018">
+
+            </TextView>
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 
