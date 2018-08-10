@@ -5,7 +5,7 @@
     <string name="prompt_cpf_cnpj">Digite o número de CPF ou CNPJ</string>
 
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in">OK</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
@@ -106,5 +106,5 @@ comprove a assinatura do condutor infrator, quando esta não constar no referido
     <string name="activity_dados_condutor_proprietario_label">IDENTIFICAÇÃO DO CONDUTOR / INFRATOR</string>
     <string name="assinatura_do_condutor">Assinatura\ndo Condutor:</string>
     <string name="assinatura_do_proprietario" >Assinatura\ndo Proprietário:</string>
-
+<string name="indicacao_botao_concluir">CONCLUIR</string>
 </resources>
