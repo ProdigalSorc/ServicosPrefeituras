@@ -98,12 +98,11 @@
                 android:id="@+id/activity_dados_proprietario_foto_cnh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:text="Foto CNH:"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@+id/activity_indicacao_proprietario_botao_tira_foto_cnh"
-                app:layout_constraintStart_toStartOf="@+id/activity_dados_proprietario_cpf_indicado_label"
-                app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_cpf_indicado_label" />
+                app:layout_constraintStart_toStartOf="@+id/activity_dados_proprietario_data_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_data_label" />
 
             <ImageButton
                 android:id="@+id/activity_indicacao_proprietario_botao_tira_foto_cnh"
@@ -117,7 +116,7 @@
                 android:background="@android:color/transparent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/activity_dados_proprietario_foto_cnh"
-                app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_cpf_indicado_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_data_label"
                 app:srcCompat="@mipmap/ic_retirar_foto" />
 
             <TextView
@@ -157,8 +156,8 @@
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/activity_dados_proprietario_assinatura"
-                app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_assinatura">
+                app:layout_constraintStart_toStartOf="@+id/activity_dados_proprietario_cpf_indicado_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_dados_proprietario_cpf_indicado_label">
 
             </TextView>
 

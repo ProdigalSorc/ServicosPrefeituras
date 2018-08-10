@@ -85,7 +85,7 @@ public class ConsultarMultasActivity extends BaseActivity implements ItemClickLi
         getMulta1();
         getMulta2();
         getMulta3();
-//        getMulta4();
+        getMulta4();
 //        getMulta5();
     }
 
@@ -178,6 +178,38 @@ public class ConsultarMultasActivity extends BaseActivity implements ItemClickLi
 
         Calendar calendar2 = Calendar.getInstance();
         calendar2.setTime(DataUtil.strToDateTime("30/08/2018 11:00"));
+        multaRetorno.setDataLimite(calendar2);
+
+        multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_AGUARDANDO);
+        list.add(multaRetorno);
+    }
+
+    private void getMulta4() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(DataUtil.strToDateTime("01/08/2018 10:20"));
+        MultaRetorno multaRetorno = new MultaRetorno();
+        multaRetorno.setId(4);
+        multaRetorno.setNumAit("0014");
+        multaRetorno.setSerie("C");
+        multaRetorno.setOrgaoAutuador("Prefeitura de Itu");
+        multaRetorno.setDataInfracao(calendar);
+        multaRetorno.setHoraInfracao(calendar);
+        multaRetorno.setPlaca("BIT-0010");
+        multaRetorno.setMarca("Gol 1.0");
+        multaRetorno.setEspecie("Passageiro");
+        multaRetorno.setNomeProprietario("José da Silva");
+
+        Calendar calendar1 = Calendar.getInstance();
+        calendar1.setTime(DataUtil.strToDateTime("10/08/2018 11:00"));
+        multaRetorno.setDataEmissao(calendar1);
+
+        multaRetorno.setDescricaoInfracao("Avançar o sinal vermelho do semáforo");
+        multaRetorno.setEnquadramento("605-0");
+        multaRetorno.setLocalInfracao("Rua Sabino");
+        multaRetorno.setPontosCnh("5");
+
+        Calendar calendar2 = Calendar.getInstance();
+        calendar2.setTime(DataUtil.strToDateTime("10/09/2018 11:00"));
         multaRetorno.setDataLimite(calendar2);
 
         multaRetorno.setSituacaoMultaEnum(SituacaoMultaEnum.AIT_AGUARDANDO);

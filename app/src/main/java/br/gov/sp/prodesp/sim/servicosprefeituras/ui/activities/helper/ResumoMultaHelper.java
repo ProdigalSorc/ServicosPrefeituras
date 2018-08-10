@@ -19,6 +19,9 @@ import static br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities.intefaces.
 
 public class ResumoMultaHelper {
 
+    private final TextView numAit;
+    private final TextView serie;
+    private final TextView orgao;
     private final TextView placa;
     private final TextView marca;
     private final TextView especie;
@@ -37,6 +40,9 @@ public class ResumoMultaHelper {
 
     public ResumoMultaHelper(final ResumoMultaActivity activity) {
         this.activity = activity;
+        numAit = activity.findViewById(R.id.activity_resumo_multa_num_ait_infracao);
+        serie = activity.findViewById(R.id.activity_resumo_multa_serie_ait_infracao);
+        orgao = activity.findViewById(R.id.activity_resumo_multa_orgao_infracao);
         placa = activity.findViewById(R.id.activity_resumo_multa_placa);
         marca = activity.findViewById(R.id.activity_resumo_multa_marca);
         especie = activity.findViewById(R.id.activity_resumo_multa_especie);
@@ -75,6 +81,9 @@ public class ResumoMultaHelper {
     }
 
     public void preenche(MultaRetorno multaRetorno, String tipoAcesso) {
+        numAit.setText(multaRetorno.getNumAit());
+        serie.setText(multaRetorno.getSerie());
+        orgao.setText(multaRetorno.getOrgaoAutuador());
         placa.setText(multaRetorno.getPlaca());
         marca.setText(multaRetorno.getMarca());
         especie.setText(multaRetorno.getEspecie());
