@@ -72,12 +72,12 @@ public class IndicacaoActivity extends BaseActivity {
 //                    .setText("AGENTE"));
 //        } else {
         tabLayout.addTab(tabLayout.newTab()
-                        .setContentDescription(Constantes.TAB_PROPRIETARIO)
-//                    .setIcon(R.drawable.tab_proprietario)
+                .setContentDescription(Constantes.TAB_PROPRIETARIO)
+                .setIcon(R.mipmap.icone_proprietario)
         );
         tabLayout.addTab(tabLayout.newTab()
-                        .setContentDescription(Constantes.TAB_CONDUTOR)
-//                    .setIcon(R.drawable.tab_condutor)
+                .setContentDescription(Constantes.TAB_CONDUTOR)
+                .setIcon(R.mipmap.icone_condutor)
         );
 //        }
     }

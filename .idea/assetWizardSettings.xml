@@ -72,9 +72,11 @@
                                   </option>
                                   <option name="values">
                                     <map>
+                                      <entry key="assetType" value="IMAGE" />
                                       <entry key="backgroundColor" value="3098c8" />
-                                      <entry key="imageAsset" value="C:\Users\436236692\Pictures\Indicação de Condutor\Indicação+condutor.png" />
-                                      <entry key="outputName" value="icone_assinatura" />
+                                      <entry key="iconShape" value="NONE" />
+                                      <entry key="imageAsset" value="C:\Desenv-Android\Rodrigo\Documentações\Prefeituras\Serviços Prefeituras\Re Indicar Condutor - icon\proprietario.png" />
+                                      <entry key="outputName" value="icone_proprietario" />
                                     </map>
                                   </option>
                                 </PersistentState>

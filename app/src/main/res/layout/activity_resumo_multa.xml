@@ -402,7 +402,6 @@
             android:background="@drawable/fundo_indicar"
             android:elevation="6dp"
             android:stateListAnimator="@null"
-            android:text="+"
             android:textColor="#ffffff"
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
