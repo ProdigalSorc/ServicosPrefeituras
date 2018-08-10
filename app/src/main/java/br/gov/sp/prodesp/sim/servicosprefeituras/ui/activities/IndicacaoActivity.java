@@ -3,6 +3,8 @@ package br.gov.sp.prodesp.sim.servicosprefeituras.ui.activities;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.view.View;
+import android.widget.Button;
 
 import br.gov.sp.prodesp.sim.servicosprefeituras.R;
 import br.gov.sp.prodesp.sim.servicosprefeituras.ui.adapter.IndicacaoAdapter;
@@ -48,6 +50,14 @@ public class IndicacaoActivity extends BaseActivity {
         if (extras != null) {
             viewPager.setCurrentItem(extras.getInt("ABA_SELECIONADA"));
         }
+
+        Button buttonOK = findViewById(R.id.activity_indicacao_botao_concluir);
+        buttonOK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResultOK();
+            }
+        });
     }
 
     private void setTabView() {
